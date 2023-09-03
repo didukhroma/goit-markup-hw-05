@@ -45,6 +45,7 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   /* outline: 1px solid tomato; */
@@ -136,6 +137,7 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--primary-brand-color);
   transition: background-color var(--transition-time)
     var(--transition-timing-function);
 }
@@ -320,7 +322,6 @@ body {
   min-width: 169px;
   min-height: 56px;
   color: var(--white-color);
-  background-color: var(--primary-brand-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -424,11 +425,14 @@ body {
   color: var(--light-color);
 }
 .footer-subtitle {
+  display: block;
   margin-bottom: 16px;
   font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.02em;
+
   color: var(--white-color);
+}
+.footer-social-wrapper {
+  margin-right: auto;
 }
 .footer-social-list {
   --indent-col: 16px;
@@ -443,6 +447,50 @@ body {
   width: 24px;
   height: 24px;
 }
+.subscribe-form {
+  gap: 24px;
+}
+.subscribe-thumb {
+  position: relative;
+}
+.subscribe-label {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+
+  color: var(--white-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.4emx;
+}
+
+.subscribe-input {
+  height: 40px;
+  min-width: 246px;
+  padding: 8px 60px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+  background-color: transparent;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.subscribe-input:focus-visible {
+  color: var(--primary-brand-color);
+  outline: none;
+  border: 1px solid var(--primary-brand-color);
+}
+.subscribe-input:focus-visible + .subscribe-label {
+  color: var(--primary-brand-color);
+}
+
+.subscribe-button {
+  gap: 16px;
+  padding: 8px 24px;
+
+  color: var(--white-color);
+}
+
 /**
   |============================
   | FOOTER END
