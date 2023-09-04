@@ -471,9 +471,11 @@ body {
 }
 
 .subscribe-input {
-  /* height: 40px; */
   width: 100%;
   padding: 8px 8px 8px 60px;
+
+  line-height: 1.375;
+
   border-radius: 4px;
   border: 1px solid var(--white-color);
   color: var(--white-color);
@@ -482,15 +484,9 @@ body {
 
   transition: border-color var(--transition-time)
     var(--transition-timing-function);
-  /* color var(--transition-time) var(--transition-timing-function); */
 }
 .subscribe-input::placeholder {
-  /* min-width: 246px; */
   color: var(--white-color);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.13;
-  letter-spacing: 0.02em;
 }
 .subscribe-input:focus-visible {
   outline: none;
