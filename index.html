@@ -718,6 +718,37 @@
     <!-- MODAL START-->
     <div class="backdrop is-hidden" data-modal>
       <div class="backdrop-wrapper">
+        <h1 class="backdrop-wrapper__title">
+          Leave your contacts and we will call you back
+        </h1>
+        <form
+          class="site__form"
+          action="#"
+          method="get"
+          name="issue_report_form"
+          autocomplete="off"
+          novalidate
+        >
+          <label>Name <input type="text" required /></label>
+          <label>Phone <input type="tel" required /></label>
+          <label>Email<input type="mail" /></label>
+          <label
+            >Comment
+            <input type="textarea" placeholder="Text input" />
+          </label>
+          <input type="checkbox" id="accept-terms" />
+          <label for="accept-terms"
+            >I accept the terms and conditions of the
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Privacy terms"
+              >Privacy Policy</a
+            ></label
+          >
+          <button type="submit">Send</button>
+        </form>
         <button class="backdrop-button centered" type="button" data-modal-close>
           <svg class="backdrop-icon" width="8" height="8">
             <use href="./images/icons.svg#close-btn-icon"></use>
