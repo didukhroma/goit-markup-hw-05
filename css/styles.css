@@ -357,13 +357,61 @@ body {
 .form__textarea:focus::placeholder {
   color: var(--primary-brand-color);
 }
-.form__checkbox {
+.check {
+  position: relative;
+  margin-bottom: 24px;
 }
+.check__input {
+  opacity: 0;
+}
+.check__input:focus + .check__label::before {
+  outline: 2px solid var(--primary-brand-color);
+  outline-offset: 2px;
+  border-color: var(--primary-brand-color);
+}
+
+.check__input:checked + .check__label::before {
+  background: url(../images/icons/checkbox.svg) center / cover no-repeat
+    border-box var(--pressed-state-color);
+}
+.check__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.check__label::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  content: '';
+
+  border: 1px solid var(--modal-overlay-color);
+  border-radius: 2px;
+
+  transition: border-color var(--transition-time)
+      var(--transition-timing-function),
+    background-color var(--transition-time) var(--transition-timing-function);
+
+  cursor: pointer;
+}
+
+.check:hover .check__label::before {
+  border-color: var(--primary-brand-color);
+}
+
 .form__link {
   display: inline-block;
   text-decoration: underline;
   color: var(--primary-brand-color);
   line-height: 1.33;
+}
+
+.form__button {
+  min-width: 169px;
+  margin: 0 auto;
+  color: var(--white-color);
 }
 /**
   |============================
@@ -542,10 +590,11 @@ body {
   position: relative;
   flex-grow: 1;
 }
-.subscribe-label {
+.subscribe-form__label {
   position: absolute;
   left: 16px;
-  transform: translateY(1px);
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--white-color);
   font-size: 12px;
   font-weight: 400;

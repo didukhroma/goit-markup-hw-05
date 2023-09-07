@@ -690,18 +690,19 @@
             autocomplete="off"
             novalidate
           >
-            <div class="subscribe-thumb centered">
+            <div class="form__thumb subscribe-form__thumb">
+              <label
+                class="form__label subscribe-form__label"
+                for="subscribe_email"
+                >E-mail</label
+              >
               <input
-                class="subscribe-input"
-                id="subscribe-email"
-                type="email"
-                name="email"
-                placeholder="test@test.com"
+                class="form__input"
+                type="mail"
+                id="subscribe_email"
+                name="subscribe_name"
                 required
               />
-              <label class="subscribe-label" for="subscribe-email"
-                >E-mail
-              </label>
             </div>
             <button class="subscribe-button button centered" type="submit">
               <span class="subscribe-button-text">Subscribe</span>
@@ -716,8 +717,7 @@
     <!-- FOOTER END -->
     <!-- ------------------------------------------------------------------------------ -->
     <!-- MODAL START-->
-    <!-- is-hidden -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="backdrop-wrapper">
         <!-- CLOSE BUTTON -->
         <button class="backdrop-button centered" type="button" data-modal-close>
@@ -796,13 +796,13 @@
           <!-- CHECKBOX -->
           <div class="check">
             <input
-              class="check__input"
+              class="check__input visually-hidden"
               type="checkbox"
               name="accept-terms"
               value="accept-terms"
               id="accept-terms"
             />
-            <label class="form__label" for="accept-terms">
+            <label class="form__label check__label" for="accept-terms">
               I accept the terms and conditions of the&#160;<a
                 class="form__link link"
                 href="#"
@@ -814,7 +814,7 @@
             >
           </div>
 
-          <button type="submit">Send</button>
+          <button class="form__button button" type="submit">Send</button>
         </form>
       </div>
     </div>
