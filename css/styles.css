@@ -388,15 +388,12 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 8px;
-}
-.check__icon {
   width: 16px;
   height: 16px;
 
   border: 1px solid var(--modal-overlay-color);
   border-radius: 2px;
 
-  fill: transparent;
   background-color: transparent;
 
   transition: border-color var(--transition-time)
@@ -404,6 +401,9 @@ body {
     background-color var(--transition-time) var(--transition-timing-function);
 
   cursor: pointer;
+}
+.check__icon {
+  fill: transparent;
 }
 
 .form__link {
