@@ -586,9 +586,10 @@ body {
 .subscribe-form {
   gap: 24px;
 }
-.subscribe-thumb {
+.subscribe-form__thumb {
   position: relative;
   flex-grow: 1;
+  margin: 0;
 }
 .subscribe-form__label {
   position: absolute;
@@ -596,46 +597,39 @@ body {
   top: 50%;
   transform: translateY(-50%);
   color: var(--white-color);
-  font-size: 12px;
-  font-weight: 400;
+
   line-height: 2;
   letter-spacing: 0.02em;
 
   transition: color var(--transition-time) var(--transition-timing-function);
 }
 
-.subscribe-input {
-  width: 100%;
+.subscribe-form__input {
   padding: 8px 8px 8px 60px;
-
   line-height: 1.375;
 
-  border-radius: 4px;
-  border: 1px solid var(--white-color);
+  border-color: var(--white-color);
   color: var(--white-color);
   background-color: transparent;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
-  transition: border-color var(--transition-time)
-    var(--transition-timing-function);
 }
-.subscribe-input::placeholder {
+.subscribe-form__input::placeholder {
   color: var(--white-color);
 }
-.subscribe-input:focus-visible {
+.subscribe-form__input:focus-visible {
   outline: none;
   border: 1px solid var(--primary-brand-color);
 }
-.subscribe-input:focus-visible + .subscribe-label {
+.subscribe-form__input:focus-visible + .subscribe-label {
   color: var(--primary-brand-color);
 }
-.subscribe-input:hover,
-.subscribe-input:focus {
+.subscribe-form__input:hover,
+.subscribe-form__input:focus {
   cursor: pointer;
   border: 1px solid var(--primary-brand-color);
 }
 
-.subscribe-button {
+.subscribe-form__button {
   gap: 16px;
   padding: 8px 24px;
 

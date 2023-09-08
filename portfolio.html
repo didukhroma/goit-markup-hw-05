@@ -489,20 +489,24 @@
             autocomplete="off"
             novalidate
           >
-            <div class="subscribe-thumb centered">
+            <div class="form__thumb subscribe-form__thumb">
+              <label
+                class="form__label subscribe-form__label"
+                for="subscribe_email"
+                >E-mail</label
+              >
               <input
-                class="subscribe-input"
-                id="subscribe-email"
-                type="email"
-                name="email"
-                placeholder="test@test.com"
+                class="form__input subscribe-form__input"
+                type="mail"
+                id="subscribe_email"
+                name="subscribe_name"
                 required
               />
-              <label class="subscribe-label" for="subscribe-email"
-                >E-mail
-              </label>
             </div>
-            <button class="subscribe-button button centered" type="submit">
+            <button
+              class="subscribe-form__button button centered"
+              type="submit"
+            >
               <span class="subscribe-button-text">Subscribe</span>
               <svg class="subscribe-icon" width="24" height="24">
                 <use href="./images/icons.svg#letter-icon"></use>
