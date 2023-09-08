@@ -356,8 +356,7 @@ body {
   color: var(--modal-overlay-color);
 
   transition: border-color var(--transition-time)
-      var(--transition-timing-function),
-    color var(--transition-time) var(--transition-timing-function);
+    var(--transition-timing-function);
 }
 
 .form__textarea:focus::placeholder {
@@ -397,8 +396,7 @@ body {
   fill: transparent;
   background-color: transparent;
 
-  transition: border-color var(--transition-time)
-      var(--transition-timing-function),
+  transition: border var(--transition-time) var(--transition-timing-function),
     background-color var(--transition-time) var(--transition-timing-function),
     fill var(--transition-time) var(--transition-timing-function);
 
