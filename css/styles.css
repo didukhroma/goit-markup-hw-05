@@ -378,11 +378,11 @@ body {
 }
 
 .check__input:checked + .check__label > .check__thumb {
+  border: none;
+  fill: var(--light-color);
   background-color: var(--pressed-state-color);
 }
-.check__input:checked + .check__label .check__icon {
-  fill: var(--light-color);
-}
+
 .check__thumb {
   display: inline-flex;
   justify-content: center;
@@ -394,16 +394,18 @@ body {
   border: 1px solid var(--modal-overlay-color);
   border-radius: 2px;
 
+  fill: transparent;
   background-color: transparent;
 
   transition: border-color var(--transition-time)
       var(--transition-timing-function),
-    background-color var(--transition-time) var(--transition-timing-function);
+    background-color var(--transition-time) var(--transition-timing-function),
+    fill var(--transition-time) var(--transition-timing-function);
 
   cursor: pointer;
 }
 .check__icon {
-  fill: transparent;
+  fill: inherit;
 }
 
 .form__link {
