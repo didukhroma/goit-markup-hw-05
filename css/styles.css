@@ -624,11 +624,13 @@ body {
 }
 
 .subscribe-form__button {
-  gap: 16px;
   padding: 8px 24px;
   min-width: 165px;
 
   color: var(--white-color);
+}
+.subscribe-form__icon {
+  margin-left: 16px;
 }
 
 /**

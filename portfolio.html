@@ -403,7 +403,7 @@
     <!-- MAIN END -->
     <!-- ------------------------------------------------------------------------------ -->
     <!-- FOOTER START -->
-    <footer class="footer">
+     <footer class="footer">
       <div class="footer-container container">
         <!--LOGO WRAPPER  -->
         <div class="footer-description-wrapper">
@@ -480,7 +480,7 @@
 
         <!-- SUBSCRIBE -->
         <div class="footer-subscribe">
-          <strong class="footer-subtitle">Subscribe</strong>
+          <p class="footer-subtitle">Subscribe</p>
           <form
             method="GET"
             class="subscribe-form centered"
@@ -488,26 +488,22 @@
             autocomplete="off"
             novalidate
           >
-            <div class="form__thumb subscribe-form__thumb">
-              <label
-                class="form__label subscribe-form__label"
-                for="subscribe_email"
-                >E-mail</label
-              >
-              <input
+            <label class="form__label subscribe-form__label"
+              ><input
                 class="form__input subscribe-form__input"
                 type="email"
                 id="subscribe_email"
-                name="subscribe_name"
+                name="subscribe-email"
+                placeholder="E-mail"
                 required
-              />
-            </div>
+            /></label>
+
             <button
               class="subscribe-form__button button centered"
               type="submit"
             >
-              <span class="subscribe-button-text">Subscribe</span>
-              <svg class="subscribe-icon" width="24" height="24">
+              Subscribe
+              <svg class="subscribe-form__icon" width="24" height="24">
                 <use href="./images/icons.svg#letter-icon"></use>
               </svg>
             </button>
