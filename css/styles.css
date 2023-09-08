@@ -350,7 +350,7 @@ body {
   min-height: 120px;
   resize: none;
 
-  font-size: 12px;
+  font-size: 14px;
 
   line-height: 1.17;
 
@@ -358,7 +358,8 @@ body {
 
   color: var(--modal-overlay-color);
 
-  transition: color var(--transition-time) var(--transition-timing-function);
+  transition: color var(--transition-time) var(--transition-timing-function),
+    border-color var(--transition-time) var(--transition-timing-function);
 }
 
 .form__textarea:focus::placeholder {
@@ -368,44 +369,40 @@ body {
   position: relative;
   margin-bottom: 24px;
 }
-.check__input {
-  opacity: 0;
+.check__label {
+  margin-bottom: 0;
+  user-select: none;
 }
-.check__input:focus + .check__label::before {
+.check__input:focus + .check__label > .check__thumb {
   outline: 2px solid var(--primary-brand-color);
   outline-offset: 2px;
   border-color: var(--primary-brand-color);
 }
 
-.check__input:checked + .check__label::before {
-  background: url(../images/icons/checkbox.svg) center / cover no-repeat
-    border-box var(--pressed-state-color);
+.check__input:checked + .check__label > .check__thumb {
+  background-color: var(--pressed-state-color);
 }
-.check__label {
-  display: flex;
+.check__thumb {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 0;
+  margin-right: 8px;
 }
-.check__label::before {
-  display: inline-block;
+.check__icon {
   width: 16px;
   height: 16px;
-  margin-right: 8px;
-
-  content: '';
 
   border: 1px solid var(--modal-overlay-color);
   border-radius: 2px;
+
+  fill: var(--light-color);
+  background-color: transparent;
 
   transition: border-color var(--transition-time)
       var(--transition-timing-function),
     background-color var(--transition-time) var(--transition-timing-function);
 
   cursor: pointer;
-}
-
-.check:hover .check__label::before {
-  border-color: var(--primary-brand-color);
 }
 
 .form__link {
